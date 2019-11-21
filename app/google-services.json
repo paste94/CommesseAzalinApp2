@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "556055520031",
+    "firebase_url": "https://db-azalin.firebaseio.com",
+    "project_id": "db-azalin",
+    "storage_bucket": "db-azalin.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:556055520031:android:a8a0f9765b9e193637862a",
+        "android_client_info": {
+          "package_name": "com.example.lstmanager"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "556055520031-fg0v3730vvos38e59ru59hre2tjvfupj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAeqY9B5nz_n7GV9Fl4tcB_SeLhnb_rkVM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "556055520031-fg0v3730vvos38e59ru59hre2tjvfupj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
