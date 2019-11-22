@@ -1,4 +1,14 @@
 <resources>
     <string name="app_name">LST Manager</string>
     <string name="scorrere_il_tag_per_cominciare">Scorrere il TAG per cominciare</string>
+    <string name="choose_commitment_description">Prego, selezionare la commessa che si desidera svolgere</string>
+    <string name="name_placeholder">NOMECOGNOME</string>
+    <string name="tornio">Tornio</string>
+    <string name="stozz">Stozz</string>
+    <string name="squadr">Squadr</string>
+    <string name="rettifica">Rettifica</string>
+    <string name="fresa">Fresa</string>
+    <string name="banco">Banco</string>
+    <string name="cn">CN</string>
+    <string name="choose_machine_description">Prego, selezionare il lavoro che si desidera svolgere</string>
 </resources>
