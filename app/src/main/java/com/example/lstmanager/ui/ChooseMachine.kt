@@ -42,31 +42,30 @@ class ChooseMachine : AppCompatActivity() {
         btnSquadr.isEnabled = false
         btnStozz.isEnabled = false
         btnTornio.isEnabled = false
+        val callback: () -> Unit = {
+            backToMain()
+        }
         when(v.id){
             R.id.btnBanco -> {
-                val callback: () -> Unit = {
-                    Log.d("PROVA", "ARRIVATO")
-                    backToMain()
-                }
                 FirebaseDAO().startWork(employee, commitment, "Banco" , callback)
             }
             R.id.btnCN -> {
-
+                FirebaseDAO().startWork(employee, commitment, "CN" , callback)
             }
             R.id.btnFresa -> {
-
+                FirebaseDAO().startWork(employee, commitment, "Fresa" , callback)
             }
             R.id.btnRettifica -> {
-
+                FirebaseDAO().startWork(employee, commitment, "Rettifica" , callback)
             }
             R.id.btnSquadr -> {
-
+                FirebaseDAO().startWork(employee, commitment, "Squadr" , callback)
             }
             R.id.btnStozz -> {
-
+                FirebaseDAO().startWork(employee, commitment, "Stozz" , callback)
             }
             R.id.btnTornio -> {
-
+                FirebaseDAO().startWork(employee, commitment, "Tornio" , callback)
             }
         }
     }
