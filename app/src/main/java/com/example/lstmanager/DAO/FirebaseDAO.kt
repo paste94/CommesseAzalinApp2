@@ -3,8 +3,12 @@ package com.example.lstmanager.DAO
 import android.util.Log
 import com.example.lstmanager.objects.Commitment
 import com.example.lstmanager.objects.Employee
+import com.google.firebase.firestore.FieldPath
+import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.Query
+import com.google.firestore.v1.DocumentTransform
+import java.sql.Timestamp
 import java.util.*
 import kotlin.collections.ArrayList
 import kotlin.collections.HashMap
@@ -38,6 +42,31 @@ class FirebaseDAO{
                 }
                 Log.d(TAG, commitments.toString())
                 callback(employee, commitments)
+            }
+    }
+
+    fun startWork(employee: Employee, commitment: Commitment, machine: String, callback: ()-> Unit){
+        val commitmentRef = db.collection("commesse").document(commitment.getId())
+        val timestamp = Timestamp(System.currentTimeMillis())
+        val fieldName = "lavoro.$timestamp"
+
+
+        commitmentRef.update(fieldName, mapOf(
+            "start" to timestamp,
+            "end" to null,
+            "employee" to employee.getId(),
+            "machine" to machine
+        )).addOnSuccessListener {
+            addWorkToEmployee(employee.getId(), timestamp, callback)
+        }
+    }
+
+    private fun addWorkToEmployee(employee: String, workID: Timestamp, callback: () -> Unit){
+        db.collection("employee")
+            .document(employee)
+            .update("runningWorks", FieldValue.arrayUnion(workID))
+            .addOnSuccessListener {
+                callback()
             }
     }
 }

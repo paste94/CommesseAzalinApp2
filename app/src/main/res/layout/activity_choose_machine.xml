@@ -32,19 +32,25 @@
         android:layout_height="70dp"
         android:orientation="horizontal">
         <Button
+            android:id="@+id/btnBanco"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="@string/banco"
+            android:onClick="onClick"
             android:layout_weight="1"/>
         <Button
+            android:id="@+id/btnCN"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="@string/cn"
+            android:onClick="onClick"
             android:layout_weight="1"/>
         <Button
+            android:id="@+id/btnFresa"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="@string/fresa"
+            android:onClick="onClick"
             android:layout_weight="1"/>
     </LinearLayout>
     <LinearLayout
@@ -52,19 +58,25 @@
         android:layout_height="70dp"
         android:orientation="horizontal">
         <Button
+            android:id="@+id/btnRettifica"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="@string/rettifica"
+            android:onClick="onClick"
             android:layout_weight="1"/>
         <Button
+            android:id="@+id/btnSquadr"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="@string/squadr"
+            android:onClick="onClick"
             android:layout_weight="1"/>
         <Button
+            android:id="@+id/btnStozz"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="@string/stozz"
+            android:onClick="onClick"
             android:layout_weight="1"/>
     </LinearLayout>
 
@@ -78,9 +90,11 @@
             android:visibility="invisible"
             android:layout_weight="1"/>
         <Button
+            android:id="@+id/btnTornio"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="@string/tornio"
+            android:onClick="onClick"
             android:layout_weight="1"/>
         <Button
             android:layout_width="match_parent"

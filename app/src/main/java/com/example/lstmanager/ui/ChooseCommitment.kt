@@ -45,6 +45,7 @@ class ChooseCommitment : AppCompatActivity() {
 
             val intent = Intent(this, ChooseMachine::class.java)
             intent.putExtra("commitment", commitments[i])
+            intent.putExtra("employee", employee)
             startActivity(intent)
 
         }

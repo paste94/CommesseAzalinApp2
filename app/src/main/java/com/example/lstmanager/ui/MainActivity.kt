@@ -27,6 +27,9 @@ class MainActivity : AppCompatActivity() {
 
         editEmployeeCode.setOnKeyListener(View.OnKeyListener { v, keyCode, event ->
             if (keyCode == KEYCODE_ENTER && event.action == ACTION_UP) {
+                TODO("Aggiungi un controllo che vede se il tipendente ha dei lavori in " +
+                        "sospeso. Se così fosse allora aggiungi una schermata in cui chiedi se " +
+                        "devi aggiungere un lavoro o se vuoi chiudere il precedente")
                 progressBar.visibility = View.VISIBLE
                 editEmployeeCode.isEnabled = false
                 val code = editEmployeeCode.text.toString()
