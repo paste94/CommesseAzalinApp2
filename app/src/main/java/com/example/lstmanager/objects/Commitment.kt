@@ -2,11 +2,14 @@ package com.example.lstmanager.objects
 
 import com.google.firebase.firestore.QuerySnapshot
 import java.io.Serializable
+import java.sql.Time
+import java.sql.Timestamp
 
 class Commitment(
     private val id: String,
     private val name: String,
-    private val number: String
+    private val number: String,
+    private val preventivo: ArrayList<String>
 ): Serializable {
 
     override fun toString(): String {
@@ -23,5 +26,13 @@ class Commitment(
 
     fun getNumber(): String{
         return number
+    }
+
+    fun getPreventivo():  ArrayList<String>{
+        return preventivo
+    }
+
+    fun getPairForListView(): Pair<String, ArrayList<String>>{
+        return Pair(name, preventivo)
     }
 }

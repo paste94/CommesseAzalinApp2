@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="titleMarginTop">108dp</dimen>
+    <dimen name="titleTextSize">35sp</dimen>
+    <dimen name="subTitleTextSize">26sp</dimen>
+    <dimen name="titleMarginTopLinear">52dp</dimen>
+    <dimen name="machine_margins">20dp</dimen>
+    <dimen name="btn_machine_height">90dp</dimen>
+    <dimen name="btn_machine_vertical_margin">20dp</dimen>
+    <dimen name="btn_machine_horizontal_margin">15dp</dimen>
+    <dimen name="btn_machine_text_size">25sp</dimen>
+
+</resources>

@@ -29,78 +29,158 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/btn_machine_vertical_margin"
         android:orientation="horizontal">
         <Button
             android:id="@+id/btnBanco"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="@dimen/btn_machine_height"
+            android:layout_marginEnd="@dimen/btn_machine_horizontal_margin"
+            android:textSize="@dimen/btn_machine_text_size"
             android:text="@string/banco"
             android:onClick="onClick"
             android:layout_weight="1"/>
         <Button
-            android:id="@+id/btnCN"
+            android:id="@+id/btnTornio"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/cn"
-            android:onClick="onClick"
-            android:layout_weight="1"/>
-        <Button
-            android:id="@+id/btnFresa"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/fresa"
+            android:layout_height="@dimen/btn_machine_height"
+            android:layout_marginStart="@dimen/btn_machine_horizontal_margin"
+            android:textSize="@dimen/btn_machine_text_size"
+            android:text="@string/tornio"
             android:onClick="onClick"
             android:layout_weight="1"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/btn_machine_vertical_margin"
         android:orientation="horizontal">
         <Button
-            android:id="@+id/btnRettifica"
+            android:id="@+id/btnFresa"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/rettifica"
+            android:layout_height="@dimen/btn_machine_height"
+            android:layout_marginEnd="@dimen/btn_machine_horizontal_margin"
+            android:textSize="@dimen/btn_machine_text_size"
+            android:text="@string/fresa"
             android:onClick="onClick"
             android:layout_weight="1"/>
         <Button
+            android:id="@+id/btnRettifica"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_machine_height"
+            android:layout_marginStart="@dimen/btn_machine_horizontal_margin"
+            android:textSize="@dimen/btn_machine_text_size"
+            android:text="@string/rettifica"
+            android:onClick="onClick"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/btn_machine_vertical_margin"
+        android:orientation="horizontal">
+        <Button
             android:id="@+id/btnSquadr"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="@dimen/btn_machine_height"
+            android:layout_marginEnd="@dimen/btn_machine_horizontal_margin"
+            android:textSize="@dimen/btn_machine_text_size"
             android:text="@string/squadr"
             android:onClick="onClick"
             android:layout_weight="1"/>
         <Button
             android:id="@+id/btnStozz"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="@dimen/btn_machine_height"
+            android:layout_marginStart="@dimen/btn_machine_horizontal_margin"
+            android:textSize="@dimen/btn_machine_text_size"
             android:text="@string/stozz"
+            android:onClick="onClick"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/btn_machine_vertical_margin"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btnCN1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_machine_height"
+            android:layout_marginEnd="@dimen/btn_machine_horizontal_margin"
+            android:textSize="@dimen/btn_machine_text_size"
+            android:text="@string/cn1"
+            android:onClick="onClick"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/btnCN2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_machine_height"
+            android:layout_marginStart="@dimen/btn_machine_horizontal_margin"
+            android:textSize="@dimen/btn_machine_text_size"
+            android:text="@string/cn2"
             android:onClick="onClick"
             android:layout_weight="1"/>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/btn_machine_vertical_margin"
         android:orientation="horizontal">
         <Button
+            android:id="@+id/btnCN3"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:visibility="invisible"
-            android:layout_weight="1"/>
-        <Button
-            android:id="@+id/btnTornio"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/tornio"
+            android:layout_height="@dimen/btn_machine_height"
+            android:layout_marginEnd="@dimen/btn_machine_horizontal_margin"
+            android:textSize="@dimen/btn_machine_text_size"
+            android:text="@string/cn3"
             android:onClick="onClick"
             android:layout_weight="1"/>
         <Button
+            android:id="@+id/btnCN4"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:visibility="invisible"
+            android:layout_height="@dimen/btn_machine_height"
+            android:layout_marginStart="@dimen/btn_machine_horizontal_margin"
+            android:textSize="@dimen/btn_machine_text_size"
+            android:text="@string/cn4"
+            android:onClick="onClick"
             android:layout_weight="1"/>
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/btn_machine_vertical_margin"
+        android:orientation="horizontal">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/btnCN5"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_machine_height"
+            android:textSize="@dimen/btn_machine_text_size"
+            android:text="@string/cn5"
+            android:onClick="onClick"
+            android:layout_weight="0.5"/>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/machineProgressBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:visibility="gone"/>
 
 </LinearLayout>

@@ -9,6 +9,26 @@
     <string name="rettifica">Rettifica</string>
     <string name="fresa">Fresa</string>
     <string name="banco">Banco</string>
-    <string name="cn">CN</string>
+    <string name="cn1">C.N. 1</string>
+    <string name="cn2">C.N. 2</string>
+    <string name="cn3">C.N. 3</string>
+    <string name="cn4">C.N. 4</string>
+    <string name="cn5">C.N. 5</string>
     <string name="choose_machine_description">Prego, selezionare il lavoro che si desidera svolgere</string>
+    <string name="si_desidera_iniziare_un_nuovo_lavoro_o_concluderne_uno_gi_avviato">Si desidera iniziare un nuovo lavoro o concluderne uno già avviato?</string>
+    <string name="nuovo_lavoro">nuovo lavoro</string>
+    <string name="termina">Termina</string>
+    <string name="selezionare_la_commessa_che_si_desidera_terminare">Selezionare la commessa che si desidera terminare</string>
+    <string name="seleziona_tutto">Seleziona tutto</string>
+    <string name="deseleziona_tutto">Deseleziona tutto</string>
+    <string name="termina_selezionati">Termina selezionati</string>
+
+    <string name="collection_employee">employee-test</string>
+    <string name="collection_jobs">jobs-test</string>
+    <string name="collection_commesse">commesse-test</string>
+    <!--
+    <string name="collection_employee">employee</string>
+    <string name="collection_jobs">jobs</string>
+    <string name="collection_commesse">commesse</string>
+    -->
 </resources>

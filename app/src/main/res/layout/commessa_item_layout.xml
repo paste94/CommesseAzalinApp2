@@ -15,7 +15,6 @@
 
     <TextView
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-        android:text="Occupation"
         android:id="@+id/txtCommitmentNumber"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

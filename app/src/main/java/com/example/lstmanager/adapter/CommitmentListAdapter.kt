@@ -11,7 +11,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.lstmanager.R
 import com.example.lstmanager.objects.Commitment
 
-class CommitmentListAdapter(private val commitmentList: ArrayList<Commitment>, ctx: Context): ArrayAdapter<Commitment>(ctx, R.layout.commessa_item_layout, commitmentList) {
+class CommitmentListAdapter(
+    private val commitmentList: ArrayList<Commitment>,
+    ctx: Context
+): ArrayAdapter<Commitment>(ctx, R.layout.commessa_item_layout, commitmentList) {
 
     //view holder is used to prevent findViewById calls
     private class ItemViewHolder {

@@ -2,10 +2,11 @@ package com.example.lstmanager.objects
 
 import java.io.Serializable
 
-class Employee (
+class Employee(
     private val id: String,
     private val name: String,
-    private val surname: String
+    private val surname: String,
+    private val currentWorks: ArrayList<*>
 ): Serializable {
 
     fun getId(): String{
@@ -20,7 +21,13 @@ class Employee (
         return surname
     }
 
-    override fun toString(): String {
-        return "Employee(id='$id', name='$name', surname='$surname')"
+    fun getCurrentWorks(): ArrayList<*> {
+        return currentWorks
     }
+
+    override fun toString(): String {
+        return "Employee(id='$id', name='$name', surname='$surname', currentWorks=$currentWorks)"
+    }
+
+
 }

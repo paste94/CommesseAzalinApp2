@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.ChooseMachine"></activity>
+        <activity android:name=".ui.EndWork"></activity>
+        <activity android:name=".ui.ChooseNewOrClose" />
+        <activity android:name=".ui.ChooseMachine" />
         <activity android:name=".ui.ChooseCommitment" />
         <activity android:name=".ui.MainActivity">
             <intent-filter>
