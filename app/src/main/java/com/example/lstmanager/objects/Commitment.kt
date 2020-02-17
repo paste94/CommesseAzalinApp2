@@ -9,6 +9,7 @@ class Commitment(
     private val id: String,
     private val name: String,
     private val number: String,
+    private val closed: Boolean,
     private val preventivo: ArrayList<String>
 ): Serializable {
 
@@ -28,11 +29,15 @@ class Commitment(
         return number
     }
 
+    fun isClosed(): Boolean{
+        return closed
+    }
+
     fun getPreventivo():  ArrayList<String>{
         return preventivo
     }
 
-    fun getPairForListView(): Pair<String, ArrayList<String>>{
-        return Pair(name, preventivo)
+    fun getPairForListView(): ArrayList<String>{
+        return preventivo
     }
 }

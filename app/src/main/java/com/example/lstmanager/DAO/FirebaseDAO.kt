@@ -54,11 +54,14 @@ class FirebaseDAO{
                         val listOfPrev = ArrayList<String>()
                         val prevs = document.data["preventivo"] as HashMap<*, *>
                         prevs.forEach { p ->
-                            listOfPrev.add(p.key.toString())
+                            val obj = p.value as HashMap<String, Boolean>
+                            if(obj["deleted"] != true){
+                                listOfPrev.add(p.key.toString())
+                            }
                         }
-                        commitments.add(Commitment(document.id, document.data["name"].toString(), document.data["number"].toString(), listOfPrev))
+                        commitments.add(Commitment(document.id, document.data["name"].toString(), document.data["number"].toString(), document.data["closed"].toString().toBoolean(), listOfPrev))
                     }else{
-                        commitments.add(Commitment(document.id, document.data["name"].toString(), document.data["number"].toString(), ArrayList()))
+                        commitments.add(Commitment(document.id, document.data["name"].toString(), document.data["number"].toString(), document.data["closed"].toString().toBoolean(), ArrayList()))
                     }
                 }
                 Log.d(TAG, commitments.toString())

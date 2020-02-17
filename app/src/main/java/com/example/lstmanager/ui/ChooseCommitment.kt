@@ -4,6 +4,7 @@ import android.content.Intent
 import android.graphics.PorterDuff
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.*
 import androidx.core.app.TaskStackBuilder
@@ -44,31 +45,21 @@ class ChooseCommitment : AppCompatActivity() {
 
         val listOfCommitmentsId = ArrayList<String>()
         commitments.forEach{ e ->
-            listOfCommitmentsId.add(e.getName())
+            if(!e.isClosed()){
+                listOfCommitmentsId.add(e.getNumber())
+            }
         }
 
         val expListData = HashMap<String, ArrayList<String>>()
         commitments.forEach{ e ->
-            val p = e.getPairForListView()
-            expListData[p.first] = p.second
+            if(!e.isClosed()){
+                val p = e.getPairForListView()
+                expListData[e.getNumber()] = p
+            }
         }
 
         val expandableListAdapter = CommitmentExpandableListAdapter(this, listOfCommitmentsId, expListData)
         expandableListView.setAdapter(expandableListAdapter)
-
-        expandableListView.setOnGroupExpandListener{
-            Toast.makeText(applicationContext,
-                listOfCommitmentsId[it] + " List Expanded.",
-                Toast.LENGTH_SHORT
-            ).show()
-        }
-
-        expandableListView.setOnGroupCollapseListener{
-            Toast.makeText(applicationContext,
-                listOfCommitmentsId[it] + " List Collapsed.",
-                Toast.LENGTH_SHORT
-            ).show()
-        }
 
         expandableListView.setOnChildClickListener { parent, v, groupPosition, childPosition, id ->
             val jsonEmployee = Gson().toJson(employee)

@@ -2,7 +2,6 @@ package com.example.lstmanager.ui
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.KeyEvent.ACTION_UP
 import android.view.KeyEvent.KEYCODE_ENTER
 import android.view.View
@@ -12,7 +11,6 @@ import com.example.lstmanager.DAO.FirebaseDAO
 import com.example.lstmanager.R
 import com.example.lstmanager.objects.Commitment
 import com.example.lstmanager.objects.Employee
-import com.google.firebase.auth.FirebaseAuth
 import com.google.gson.Gson
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -29,9 +27,15 @@ class MainActivity : AppCompatActivity() {
 
         editEmployeeCode.setOnKeyListener(View.OnKeyListener { v, keyCode, event ->
             if (keyCode == KEYCODE_ENTER && event.action == ACTION_UP) {
+                val code = editEmployeeCode.text.toString()
+                if(code=="Aggiorna" || code == "aggiorna"){
+                    val intent = Intent(this, UpdateActivity::class.java)
+                    startActivity(intent)
+
+                    return@OnKeyListener true
+                }
                 progressBar.visibility = View.VISIBLE
                 editEmployeeCode.isEnabled = false
-                val code = editEmployeeCode.text.toString()
 
                 val callback: (Employee?, ArrayList<Commitment>) -> Unit = { employee: Employee?, commitments: ArrayList<Commitment> ->
                     when {

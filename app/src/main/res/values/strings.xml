@@ -26,6 +26,8 @@
     <string name="collection_employee">employee-test</string>
     <string name="collection_jobs">jobs-test</string>
     <string name="collection_commesse">commesse-test</string>
+    <string name="credits">Credits</string>
+    <string name="controlla_aggiornamenti">Controlla aggiornamenti</string>
     <!--
     <string name="collection_employee">employee</string>
     <string name="collection_jobs">jobs</string>

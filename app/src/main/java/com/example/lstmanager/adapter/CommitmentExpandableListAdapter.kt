@@ -1,12 +1,15 @@
 package com.example.lstmanager.adapter
 
 import android.content.Context
+import android.content.res.ColorStateList
+import android.graphics.Color
 import android.graphics.Typeface
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseExpandableListAdapter
 import android.widget.TextView
+import androidx.core.view.marginStart
 import com.example.lstmanager.R
 
 
@@ -47,6 +50,12 @@ class CommitmentExpandableListAdapter(
         }
 
         viewHolder.txtCommitmentName!!.text = expandedListText
+        viewHolder.txtCommitmentName!!.textSize = 25F
+        viewHolder.txtCommitmentName!!.setTextColor(Color.GRAY)
+
+
+        viewHolder.txtCommitmentName!!.setPadding(130, 50,50,50)
+
 
         view.tag = viewHolder
 
@@ -78,7 +87,6 @@ class CommitmentExpandableListAdapter(
     ): View {
         val listTitle = getGroup(groupPosition) as String?
         var view = convertView
-
         val viewHolder: GroupViewHolder
 
         if (view == null) {
@@ -93,9 +101,14 @@ class CommitmentExpandableListAdapter(
         }
 
         viewHolder.txtCommitmentName!!.text = listTitle
+        viewHolder.txtCommitmentName!!.textSize = 25F
+        viewHolder.txtCommitmentName!!.setTextColor(Color.BLACK)
+
+        viewHolder.txtCommitmentName!!.setTypeface(null, Typeface.BOLD)
+        viewHolder.txtCommitmentName!!.setPadding(130, 50,50,50)
 
         view.tag = viewHolder
-
+        
         return view
     }
 
